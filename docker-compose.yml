@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    image: crud-image:v1
+    ports:
+      - 8081:8081
+    environment:
+      - DB_OSN=root@tcp(host.docker.internal:3306)/login?charset=utf8mb4&parseTime=True&loc=UTC
+#  db:
+#    image: mysql:8.0
+#    environment:
+#      - MYSQL_DATABASE = login
